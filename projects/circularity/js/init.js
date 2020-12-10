@@ -21,9 +21,18 @@ var init = function (window) {
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM SETUP ////////////////////////////
         ////////////////////////////////////////////////////////////
-        
-        
-
+        //todo 1 
+        var circle;
+        var circles = [];
+        //todo 2
+        function drawCircle(){
+            circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
+            physikz.addRandomVelocity(circle, canvas);
+            view.addChild(circle);
+            circles.push(circle);  
+        }
+        //todo 3
+        drawCircle(5)
 
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
