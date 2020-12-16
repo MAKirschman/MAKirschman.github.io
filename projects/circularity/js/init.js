@@ -27,7 +27,7 @@ var init = function (window) {
         //todo 2
         function drawCircle(){
             circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
-            physikz.addRandomVelocity(circle, canvas);
+            physikz.addRandomVelocity(circle, canvas, 10, 10);
             view.addChild(circle);
             circles.push(circle);  
         }
@@ -44,7 +44,16 @@ var init = function (window) {
         and check to see if it has drifted off the screen.         
         */
         function update() {
-            
+           physikz.updatePosition( [0] );
+	physikz.updatePosition( [1] );
+	physikz.updatePosition( [2] );
+	physikz.updatePosition( [3] );
+	physikz.updatePosition( [4] );
+}   game.checkCirclePosition( [0] );
+    game.checkCirclePosition( [1] );
+    game.checkCirclePosition( [2] );
+    game.checkCirclePosition( [3] );
+    game.checkCirclePosition( [4] );
            
             
         }
