@@ -1,0 +1,22 @@
+USERSTORY/GAMEPLAY
+
+1. Describe the gameplay
+Pong is a game in which there are two paddles on each side of the screen and a ball that bounces off of them. 
+The objective of the game is to hit the ball before it goes off of the screen. If the ball goes off of the 
+screen the person who hit it gets a point. The ball speeds up according to how many times it was consecutivly hit.
+
+2. What are the conditions when the game begins?
+When the game begins the ball is moving slowly and the paddles are both set in the middle of the screen. The score
+is also set at zero.
+
+3. Does the game have an end? If so, what are the conditions for when it ends?
+The game does have a win con. The game is won when one player reaches 11 points. This is the case unless it gets to 10 - 10,
+in this situation the game is decided by winning by 2 points. When the game ends you return to the main menu.
+
+4. What ifs will there be?
+There will be an if to determine whta happens to the ball and how the paddles move. if the ball hits it needs to be launched 
+back but if it is missed it needs to go off screen. If there is a keyboard input to indicate movement of the paddle it needs to actually move.
+
+Visual Game Components
+
+1. 
