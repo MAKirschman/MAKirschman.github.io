@@ -19,4 +19,32 @@ back but if it is missed it needs to go off screen. If there is a keyboard input
 
 Visual Game Components
 
-1. 
+1. What are the visual game components? 
+a. The main visual components are the two paddles and the dotted line down the middle that signifies half-court. There are also score counters and a ball on the screen.
+b. paddles - dynamic
+   half court line - static
+   ball - dynamic
+   score counters - dynamic
+2. What data will you need to manage each game component?
+   paddles - positionX, onKeyboardClick, and speedX
+   half court line - positionX
+   ball - positionX and speedX
+   score counter - positionX and points
+
+Events/Logic
+1. What events will occur in this game?
+There will be many events that occur during the game. The paddles will move based off of keyboard buttons (I.E up arrow key and down arrow key). 
+The points will add up based on if the ball is out of bounds or not. There will be clicking events on the start game button. It will start the game and make the ball
+start to move.
+
+2. How do those events affect the data of the program?
+These events affect the data of the program because it means that the program has to include a lot of on press events and code that doesnt have hard coded numbers.
+since the game is constantly changing the numbers, positioning, and speed need to constantly change with them. 
+
+3.For each "event", write out the high-level logic of what will happen. 
+paddles - w and the up arrow will both corrospond to moving the position of the paddle upwards while s and the down arrow will move it down. 
+There also needs to be a boundry at the top and bottom of the screen to stop the paddle from leaving the players' view.
+ball  - when the ball hits a paddle it needs to speed up, and when it misses a paddle a point needs to be added to the person who last hit it. 
+There also needs to be a boundry so that it bounces off of the top and bottom of the screen.
+score counter - There needs to be a point counter that is connected to the ball. If the ball leaves the boundry, the person who hit it last needs to be awarded a point.
+The counter also needs to max out at 11 unless the person who reaches 11 is not winning by two or more points. In that case the game needs to go on until one player is up by 2 
