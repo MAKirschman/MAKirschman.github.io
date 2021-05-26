@@ -12,7 +12,20 @@ function runProgram(){
   var FRAMES_PER_SECOND_INTERVAL = 1000 / FRAME_RATE;
   
   // Game Item Objects
-
+   function GameItem(selector) {
+    var obj = {};
+    obj.$element = $(selector);
+    obj.width = obj.$element.width();
+    obj.height = obj.$element.height();
+    obj.x = 0;
+    obj.y = 0;
+    obj.velocityX = 0;
+    obj.velocityY = 0;
+    return obj;
+  }
+    var $board = $('#board');
+    var $score = $("#score");
+    
 
   // one-time setup
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame every 0.0166 seconds (60 Frames per second)

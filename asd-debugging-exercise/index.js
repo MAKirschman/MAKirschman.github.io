@@ -1,3 +1,4 @@
+  
 $(document).ready(function(){
 
 /////////////////
@@ -13,6 +14,7 @@ var boardHeight = $($board).height();
 var circles = [];
 var circleRadius = 10;
 
+
 //////////
 // startup
 //////////
@@ -22,7 +24,7 @@ for (var i = 0; i < maxCircles; i++){
     var newId = getId(i);
     var newCircle = makeCircle(newId);
     circles.push(newCircle);
-    
+
     addNewCircleElement(newCircle, newId);
 }
 
@@ -37,16 +39,16 @@ setInterval(update, 1000/60);
 // note: it only creates an object; it does not create a circle in the HTML
 function makeCircle(id){
     var circle = {};
-    
+
     var maxX = boardWidth - circleRadius*2;
     var maxY = boardHeight - circleRadius*2;
-    
+
     circle.id = "#" + id;
-    circle.x = Math.random() * maXX + circleRadius;
+    circle.x = Math.random() * maxX + circleRadius;
     circle.y = Math.random() * maxY + circleRadius;
     circle.speedX = decideSpeed();
-    circle.speedY = desideSpeed();
-    
+    circle.speedY = decideSpeed();
+
     return circle;
 }
 
@@ -57,16 +59,16 @@ function decideSpeed(){
 
 // this generates an id for a circle given the circle's number
 function getId(number){
-    return "circle" + number; ()
+    return "circle" + number;
 }
 
 // this adds a circle into the HTML
-funtion addNewCircleElement(circle, id){
+function addNewCircleElement(circle, id){
     var $circle = $('<div>').attr('id', id)
         .css('left', circle.x)
         .css('top', circle.y)
         .addClass("circle");
-    
+
     $circle.appendTo($board);  
 }
 
@@ -75,14 +77,15 @@ funtion addNewCircleElement(circle, id){
 //////////////////
 
 // this should move all of the circles
-function update){
+function update(){
     for (var i = 0; i < maxCircles; i++){
-        var circle = circles[j];
+        var circle = circles[i];
         moveCircle(circle);
         bounceCircle(circle);
         updateCircleOnScreen(circle);
     }
 }
+
 
 //////////////////////////
 // update helper functions
@@ -90,13 +93,13 @@ function update){
 
 // this moves circles in memory but doesn't update them on the screen
 function moveCircle(circle){
-    circle.x = circle.speedX;
+    circle.x += circle.speedX;
     circle.y += circle.speedY;
 }
 
 // this bounces circles if they hit a wall
 function bounceCircle(circle){
-    if (circle.x < 0{
+    if (circle.x < 0){
         circle.x -= circle.speedX;
         circle.speedX *= -1;
     }
@@ -110,13 +113,12 @@ function bounceCircle(circle){
     }
     else if (circle.y > boardHeight){
         circle.y -= circle.speedY;
-        circle.speedX *= -1;
+        circle.speedY *= -1;
     }
 }
 
 // this redraws the circle's position on the screen
 function updateCircleOnScreen(circle){
-    maxCircles = 0;
 
     $(circle.id).css('left', circle.x);
     $(circle.id).css('top', circle.y);

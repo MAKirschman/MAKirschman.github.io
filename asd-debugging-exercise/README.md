@@ -2,7 +2,6 @@
 Practice using the Chrome debugger to find errors in the code. The code you will be working with uses techniques you might not be familiar with, but that's okay! You can still track down erros by using the debugger, and get the whole thing working!
 
 **Table of Contents**
-- [Setup](#setup)
 - [Project Grading](#project-grading)
 - [Project Steps](#project-steps)
 - [TODO 1: Find Extra, Missing, or Incorrect Symbols and Keywords](#todo-1-find-extra-missing-or-incorrect-symbols-and-keywords)
@@ -10,16 +9,7 @@ Practice using the Chrome debugger to find errors in the code. The code you will
 - [TODO 3: Get the Circles Moving](#todo-3-get-the-circles-moving)
 - [TODO 4: Fix Horizontal Movement](#todo-4-fix-horizontal-movement)
 - [TODO 5: Fix Sticky Circles](#todo-5-fix-sticky-circles)
-- [SUBMIT YOUR WORK](#submit-your-work)
-
-# Setup
-
-To install this project, first clone the project repository by entering these commands into your bash terminal:
-
-```bash
-git clone https://github.com/OperationSpark/asd-debugging-exercise.git
-rm -rf asd-debugging-exercise/.git
-```
+- [Submit Your Work](#submit-your-work)
 
 # Project Grading
 Each of the TODOs are weighted equally. That means that each TODO you complete is worth 20% of the credit for this project.
@@ -32,7 +22,7 @@ Start by opening up the asd-debugging-exercise folder, and then start the live s
 **DO NOT** simply go through and look for red squiggly lines. Some of them will be on parts of the code that are perfectly fine (even if it looks weird). You can easily break your program if you do not use the stack trace and debugger to find the issues.
 
 ## The actual TODO
->>>>>>> 692766c59c3e461252a3e5a172f47a9a75abfe18
+
 The first error that any debugger will find are extra/missing symbols. There are **THREE** such errors in the code that you currently have. Use the console of the developer tools to locate and fix each of these three errors.
 
 Keep in mind that the message that appears is not always the exact issue, but it might give a clue as to the exact issue (in all of these cases, the issue will either be the exact message or immediately nearby).
@@ -84,13 +74,12 @@ Once you have the circles moving, you need to make it so that they can move hori
 
 This is the final error. The circles stick to the bottom. Follow the same steps as before and see if you can figure out why and how to fix it. If you already spotted this error while trying to fix one of the previous ones, then your done! If not, then go through again and see if you can spot why the circle might not be reversing direction when it hits the bottom.
 
-# SUBMIT YOUR WORK
+# Submit Your Work
 
-Once you've gotten this code working, enter the following commands into the bash terminal:
+Submit your work regularly. Because these files are already being tracked by your GitHub repo, you can skip the "git add" step. Instead, enter the following commands:
 
 ```bash
-git add asd-debugging-exercise
-git commit -m "completed exercise"
+git commit -a -m "saving debugging exercise"
 git push
 ```
 
